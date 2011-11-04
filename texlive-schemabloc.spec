@@ -45,6 +45,7 @@ diagrams, using TikZ.
 %doc %{_texmfdistdir}/doc/latex/schemabloc/README
 %doc %{_texmfdistdir}/doc/latex/schemabloc/schemabloc.pdf
 %doc %{_texmfdistdir}/doc/latex/schemabloc/schemabloc.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,3 +56,5 @@ diagrams, using TikZ.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
