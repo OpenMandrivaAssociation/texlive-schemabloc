@@ -6,7 +6,7 @@
 # catalog-version 1.5
 Name:		texlive-schemabloc
 Version:	1.5
-Release:	2
+Release:	3
 Summary:	Draw block diagrams, using Tikz
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/schemabloc
