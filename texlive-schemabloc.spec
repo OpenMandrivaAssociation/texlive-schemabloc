@@ -1,6 +1,6 @@
 Name:		texlive-schemabloc
 Version:	58212
-Release:	1
+Release:	2
 Summary:	Draw block diagrams, using Tikz
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/schemabloc
