@@ -3,7 +3,7 @@ Version:	58212
 Release:	2
 Summary:	Draw block diagrams, using Tikz
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/schemabloc
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/schemabloc
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/schemabloc.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/schemabloc.doc.r%{version}.tar.xz
