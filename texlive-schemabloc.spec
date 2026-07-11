@@ -1,42 +1,22 @@
-Name:		texlive-schemabloc
-Version:	58212
-Release:	2
-Summary:	Draw block diagrams, using Tikz
+%global tl_name schemabloc
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.9
+Release:	%{tl_revision}.1
+Summary:	Draw block diagrams, using TikZ
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/schemabloc
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/schemabloc.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/schemabloc.doc.r%{version}.tar.xz
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/schemabloc.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/schemabloc.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides a set of macros for constructing block
-diagrams, using TikZ.
+The package provides a set of macros for constructing block diagrams,
+using TikZ. (The blox package is an "English translation" of this
+package.)
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/schemabloc/schemabloc.sty
-%doc %{_texmfdistdir}/doc/latex/schemabloc/README
-%doc %{_texmfdistdir}/doc/latex/schemabloc/schemabloc.pdf
-%doc %{_texmfdistdir}/doc/latex/schemabloc/schemabloc.tex
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
